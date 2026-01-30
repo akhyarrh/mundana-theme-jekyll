@@ -805,16 +805,17 @@ div.a2a_full_footer {display:none;}
  }
 
 /* Invert */
- @media (prefers-color-scheme: dark) {
+  @media (prefers-color-scheme: dark) {
   html {
     filter: invert(1) hue-rotate(180deg);
-  }
-  body {
     background-color: white;
   }
-  img, video, iframe,
-  .topfirstimage,
-  .not-inverted {
-	filter: invert(1) hue-rotate(180deg);
+  img, video, iframe {
+    filter: invert(1) hue-rotate(180deg);
+  }
+
+  .topfirstimage, .not-inverted {
+    position: relative;
+    filter: none;
   }
  }
