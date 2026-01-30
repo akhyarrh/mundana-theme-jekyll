@@ -806,10 +806,15 @@ div.a2a_full_footer {display:none;}
 
 /* Invert */
  @media (prefers-color-scheme: dark) {
-  html, img, video, iframe {
-    filter: invert(1);
+  html {
+    filter: invert(1) hue-rotate(180deg);
   }
   body {
     background-color: white;
+  }
+  img, video, iframe,
+  .topfirstimage,
+  .not-inverted {
+	filter: invert(1) hue-rotate(180deg);
   }
  }
